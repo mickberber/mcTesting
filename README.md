@@ -1,5 +1,7 @@
 #mc-testing
 
+![Alt text](./mctesting_js.png 'Mc-Testing logo')
+
 found on npm
 
 npm install mc-testing
