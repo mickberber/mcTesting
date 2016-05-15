@@ -75,29 +75,10 @@ tests.compareArrays = function() {
 
 tests.compareObjects = function() {
   var args = Array.prototype.slice.call(arguments);
-  for(var key in args[0]) {
-    var type = tests.typeof(args[0][key]);
-    if(type === 'array') {
-      for(var i = 1; i < args.length; i++) {
-        if(!tests.compareArrays(args[0][key], args[i][key])){
-          return false;
-        }
-      }
-    }
-    if(type === 'object') {
-      for(var i = 1; i < args.length; i++) {
-        if(!tests.compareObjects(args[0][key], args[i][key])){
-          return false;
-        }
-      }
-    }
-    for(var i = 1; i < args.length; i++) {
-      if(type === 'NaN' && args[i][key].toString() !== 'NaN') {
-        return false;
-      }
-      if(args[0][key] !== args[i][key]) {
-        return false;
-      }
+  var string = JSON.stringify(args[0]);
+  for(var i = 1; i < args.length; i++) {
+    if(string !== JSON.stringify(args[i])){
+      return false;
     }
   }
   return true;
