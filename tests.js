@@ -4,6 +4,11 @@ tests.typeof = function(value) {
   if(Array.isArray(value)) {
     return 'array';
   }
+  if(tests.isNumber(value)) {
+    if(value.toString() === 'NaN') {
+      return 'NaN';
+    }
+  }
   return typeof value;
 };
 
@@ -32,9 +37,6 @@ tests.isObject = function(value) {
 };
 
 tests.isNumber = function(value) {
-  if(value.toString() === 'NaN') {
-    return 'NaN';
-  }
   if(typeof value === 'number') {
     return true;
   } else {
@@ -50,6 +52,10 @@ tests.isFunction = function(value) {
   }
 };
 
+tests.arrayify = function(args) {
+  return Array.prototype.slice.call(args);
+};
+
 tests.length = function(value) {
   if(value.length) {
     return value.length;
@@ -58,8 +64,18 @@ tests.length = function(value) {
   }
 };
 
+tests.comparePrimitives = function() {
+  var args = tests.arrayify(arguments);
+  for(var i = 1; i < args.length; i++) {
+    if(args[i] !== args[0]) {
+      return false;
+    }
+  }
+  return true;
+};
+
 tests.compareArrays = function() {
-  var args = Array.prototype.slice.call(arguments);
+  var args = tests.arrayify(arguments);
   for(var i = 0; i < args[0].length; i++) {
     for(var j = 1; j < args.length; j++) {
       if(tests.length(args[j]) !== tests.length(args[0])) {
@@ -74,7 +90,7 @@ tests.compareArrays = function() {
 };
 
 tests.compareObjects = function() {
-  var args = Array.prototype.slice.call(arguments);
+  var args = tests.arrayify(arguments);
   var string = JSON.stringify(args[0]);
   for(var i = 1; i < args.length; i++) {
     if(string !== JSON.stringify(args[i])){
@@ -82,6 +98,22 @@ tests.compareObjects = function() {
     }
   }
   return true;
+};
+
+tests.expect = function(callback, toEqual) {
+  var result = callback;
+  var resultType = tests.typeof(result);
+  if(resultType === 'array') {
+    return tests.compareArrays(result, toEqual);
+  } else if(resultType === 'object') {
+    return tests.compareObjects(result, toEqual);
+  } else if(resultType === 'NaN') {
+    if(tests.typeof(toEqual) === 'NaN') {
+      return true;
+    }
+  } else {
+    return tests.comparePrimitives(result, toEqual);
+  }
 };
 
 
