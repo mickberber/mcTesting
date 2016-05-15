@@ -1,5 +1,7 @@
 var tests = {};
 
+//returns type of data passed to it
+//I added 'array' and 'NaN' for convenience
 tests.typeof = function(value) {
   if(Array.isArray(value)) {
     return 'array';
@@ -12,6 +14,7 @@ tests.typeof = function(value) {
   return typeof value;
 };
 
+//check if a value is a string
 tests.isString = function(value) {
   if(typeof value === 'string') {
     return true;
@@ -20,6 +23,7 @@ tests.isString = function(value) {
   }
 };
 
+//check if a value is an Array
 tests.isArray = function(value) {
   if(Array.isArray(value)) {
     return true;
@@ -28,6 +32,7 @@ tests.isArray = function(value) {
   }
 };
 
+//check if a value is an Object
 tests.isObject = function(value) {
   if(typeof value === 'object') {
     return true;
@@ -36,6 +41,7 @@ tests.isObject = function(value) {
   }
 };
 
+//check if a value is a Number
 tests.isNumber = function(value) {
   if(typeof value === 'number') {
     return true;
@@ -44,6 +50,7 @@ tests.isNumber = function(value) {
   }
 };
 
+//check if a value is a Function
 tests.isFunction = function(value) {
   if(typeof value === 'function') {
     return true;
@@ -52,18 +59,23 @@ tests.isFunction = function(value) {
   }
 };
 
+//Turn array like arguments object into an array
+//for convinence
 tests.arrayify = function(args) {
   return Array.prototype.slice.call(args);
 };
 
+//pretty explanatory here, returns length
 tests.length = function(value) {
   if(value.length) {
     return value.length;
   } else {
-    return 'No length property available.';
+    return false;
   }
 };
 
+//helper for comparing non objects, non NaNs
+//non arrays, etc
 tests.comparePrimitives = function() {
   var args = tests.arrayify(arguments);
   for(var i = 1; i < args.length; i++) {
@@ -74,9 +86,13 @@ tests.comparePrimitives = function() {
   return true;
 };
 
+//compare arrays
+//assumes it is receiving two or more arrays
 tests.compareArrays = function() {
+  //arrayify arguments object
   var args = tests.arrayify(arguments);
   for(var i = 0; i < args[0].length; i++) {
+
     for(var j = 1; j < args.length; j++) {
       if(tests.length(args[j]) !== tests.length(args[0])) {
         return false;
@@ -89,6 +105,8 @@ tests.compareArrays = function() {
   return true;
 };
 
+//compare objects with the JSON.stringify method as a sort of
+//short cut
 tests.compareObjects = function() {
   var args = tests.arrayify(arguments);
   var string = JSON.stringify(args[0]);
@@ -100,8 +118,12 @@ tests.compareObjects = function() {
   return true;
 };
 
+//takes in two items to compare
 tests.expect = function(callback, toEqual) {
+  //assign value of callback to result
   var result = callback;
+  //assign type of result to resultType for steps to take
+  //in compare vaules
   var resultType = tests.typeof(result);
   if(resultType === 'array') {
     return tests.compareArrays(result, toEqual);
