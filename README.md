@@ -6,12 +6,12 @@ found on npm
 
 npm install mc-testing
 
-simple test suite, that needs a lot of work
+Simple test suite, that needs a lot of work
 
-I don't like the testing suites available so mush that I'm married to any single one.
+I don't like the testing suites available so much
 
-So to get a better handle on testing.
+So to get a better handle on testing
 
-I started to write my own.
+I started to write my own
 
 VICTORY!
