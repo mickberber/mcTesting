@@ -1,11 +1,11 @@
 {
   "name": "mc-testing",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple JS testing module",
+  "main": "tests.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Michael Berber <mickberber@icloud.com> (https://mickberber.herokuapp.com/)",
   "license": "ISC"
 }
