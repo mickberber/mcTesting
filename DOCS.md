@@ -3,8 +3,11 @@
 
 ##Documentation
 ![Alt text](./assets/mctestingjs.png 'Mc-Testing logo')
-~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`
 
+~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+
+
+##Main Test Module Methods
 ###tests.typeof
 ===============
 Returns type of value that is passed. Takes one argument.
@@ -49,3 +52,16 @@ Returns true or false. Takes unlimited arguments. Assumes all arguments are obje
 ===============
 Returns true or false. Takes two arguments, a callback and a value for comparison.
   Checks to see if the arguments passed are equal.
+
+
+##Write Test Module Methods
+###write.testFile
+===============
+Initiates the testing process && returns results of all tests.
+Takes unlimited arguments. Console.log()s to the terminal.
+
+###write.description
+===============
+Assumes argument passed will be a string.
+String should be meant to describe the test being run.
+Returns a function to be called with a test passed in as an argument.
