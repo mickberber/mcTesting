@@ -9,5 +9,10 @@ var writeTests = tests.write;
 //each test can be easily entered in as an argument
 writeTests.testFile(
   writeTests.description('this should be an array')(tests.isArray([])),
-  writeTests.description('these arrays should be equal')(tests.compareArrays([1,2,3],[1,2,3]))
+  writeTests.description('these arrays should be equal')(tests.compareArrays([1,2,3],[1,2,3])),
+  writeTests.description('this should be a function')(tests.isFunction('this'))
 );
+
+function here() {
+  return 'yup'
+};

@@ -14,6 +14,11 @@ write.testFile = function() {
   var failed = 0;
   var results = args.map(function(value) {
     numTests++;
+    if(value.slice(-6) === 'Passed') {
+      passed++;
+    } else {
+      failed++;
+    }
     return '    Test number ' + numTests + ':' + value;
   }).join('\n');
   var footer = '\nResults:\n==========\n    Total number of tests: ' + numTests + '\n    Total tests passed: ' + passed  + '\n    Total tests failed: ' + failed;

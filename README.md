@@ -19,3 +19,9 @@ TO GET STARTED:
 
 Recreate this file to start:
 ![Alt text](./assets/testFilejs.png 'testFilejs screenshot')
+
+run:
+`node testFile.js`
+
+and your tests will output something like this in the command line:
+![Alt text](./assets/testResults.png 'testResultsjs screenshot')
