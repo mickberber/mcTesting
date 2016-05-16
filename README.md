@@ -1,7 +1,7 @@
 #mc-testing
 
 ![Alt text](./assets/mctestingjs.png 'Mc-Testing logo')
-~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`
+~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
 
 npm install mc-testing
 
@@ -13,10 +13,10 @@ So to get a better handle on testing
 
 I started to write my own
 
-~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`
+~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+
 TO GET STARTED:
-`
-/*SAMPLE TEST FILE*/
+`/*SAMPLE TEST FILE*/
 
 //require tests
 var tests = require('./tests.js');
@@ -28,6 +28,4 @@ var writeTests = tests.write;
 writeTests.testFile(
   writeTests.description('this should be an array')(tests.isArray([])),
   writeTests.description('these arrays should be equal')(tests.compareArrays([1,2,3],[1,2,3]))
-);
-
-`
+);`
