@@ -1,5 +1,5 @@
 var tests = {};
-
+var tests.write = require('./write.js');
 //returns type of data passed to it
 //I added 'array' and 'NaN' for convenience
 tests.typeof = function(value) {
@@ -108,6 +108,7 @@ tests.compareArrays = function() {
 //compare objects with the JSON.stringify method as a sort of
 //short cut
 tests.compareObjects = function() {
+  //arrayify
   var args = tests.arrayify(arguments);
   var string = JSON.stringify(args[0]);
   for(var i = 1; i < args.length; i++) {
@@ -137,6 +138,5 @@ tests.expect = function(callback, toEqual) {
     return tests.comparePrimitives(result, toEqual);
   }
 };
-
 
 module.exports = tests;
