@@ -120,7 +120,7 @@ tests.compareObjects = function() {
 };
 
 //takes in two items to compare
-tests.expect = function(callback, toEqual) {
+tests.compareYield = function(callback, toEqual) {
   //assign value of callback to result
   var result = callback;
   //assign type of result to resultType for steps to take
