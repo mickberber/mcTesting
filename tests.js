@@ -1,5 +1,5 @@
 var tests = {};
-var tests.write = require('./write.js');
+tests.write = require('./write.js');
 //returns type of data passed to it
 //I added 'array' and 'NaN' for convenience
 tests.typeof = function(value) {

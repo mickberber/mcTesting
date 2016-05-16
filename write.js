@@ -8,19 +8,25 @@ write.arrayify = function(args) {
 
 write.testFile = function() {
   var args = write.arrayify(arguments);
+  var header = 'McTestingjs::\n==========\n'
+  var numTests = 0;
+  var passed = 0;
+  var failed = 0;
   var results = args.map(function(value) {
-    return value;
+    numTests++;
+    return '    Test number ' + numTests + ':' + value;
   }).join('\n');
+  var footer = '\nResults:\n==========\n    Total number of tests: ' + numTests + '\n    Total tests passed: ' + passed  + '\n    Total tests failed: ' + failed;
+  console.log(header + results + footer);
 };
 
 write.description = function(string) {
-  var result = 'Test:: ' + string;
   //expected to be truthy or falsy, or a string
   return function(testToRun) {
     if(testToRun) {
-      return result + ' Passed';
+      return string + ' Passed';
     } else {
-      return result + ' Failed';
+      return string + ' Failed';
     }
   };
 };

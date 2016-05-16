@@ -1,6 +1,6 @@
 #mc-testing
 
-![Alt text](./mctestingjs.png 'Mc-Testing logo')
+![Alt text](./assets/mctestingjs.png 'Mc-Testing logo')
 
 found on npm
 
