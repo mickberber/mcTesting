@@ -18,7 +18,7 @@ I started to write my own
 TO GET STARTED(Quick Version):
 
 Recreate this file to start:
-![Alt text](./assets/sampleoutputfile.png 'samplefile screenshot')
+![Alt text](./assets/samplefile.png 'samplefile screenshot')
 
 run:
 `node testFile.js`
