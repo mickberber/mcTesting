@@ -18,7 +18,7 @@ I started to write my own
 TO GET STARTED(Quick Version):
 
 Recreate this file to start:
-![Alt text](./assets/testFilejs.png 'testFilejs screenshot')
+![Alt text](./assets/mctestingfile.png 'testFilejs screenshot')
 
 run:
 `node testFile.js`
