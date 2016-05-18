@@ -24,7 +24,7 @@ run:
 `node testFile.js`
 
 and your tests will output something like this in the command line:
-![Alt text](./assets/testResults.png 'testResultsjs screenshot')
+![Alt text](./assets/sampleoutput.png 'testResultsjs screenshot')
 
 
 
