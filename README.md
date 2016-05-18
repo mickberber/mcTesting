@@ -31,13 +31,13 @@ and your tests will output something like this in the command line:
 
 Writing tests starts with
 =========================
-1-Creating a testFile.js.
-2-Require the module `var tests = require('mc-testing');`
-3-For ease, I recommend also adding `var writeTests = tests.writeTests;`, which contains the description and testFile methods
-4-The `writeTests.testFile` method does the work of kicking off our process. All tests will be passed into this method as arguments.
-5-Writing an individual tests begins with the `writeTests.description` method. This method takes a string as a description of what you are testing.
-6-`writeTests.description` returns a function that takes a McTestingjs test method.
-Example: `writeTests.description('these arrays should be equal')(tests.compareArrays([1,2,3],[1,2,3]))`
+1-Creating a testFile.js. /n
+2-Require the module `var tests = require('mc-testing');` /n
+3-For ease, I recommend also adding `var writeTests = tests.writeTests;`, which contains the description and testFile methods/n
+4-The `writeTests.testFile` method does the work of kicking off our process. All tests will be passed into this method as arguments./n
+5-Writing an individual tests begins with the `writeTests.description` method. This method takes a string as a description of what you are testing./n
+6-`writeTests.description` returns a function that takes a McTestingjs test method./n
+Example: `writeTests.description('these arrays should be equal')(tests.compareArrays([1,2,3],[1,2,3]))`/n
 
 
 FAQ's
