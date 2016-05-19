@@ -3,7 +3,7 @@ var write = tests.write;
 
 function callback() {
   return [];
-};
+}
 
 function callbackObj() {
   return {};

@@ -62,6 +62,9 @@ tests.isFunction = function(value) {
 //Turn array like arguments object into an array
 //for convinence
 tests.arrayify = function(args) {
+  if(args === undefined) {
+    return [];
+  }
   return Array.prototype.slice.call(args);
 };
 
