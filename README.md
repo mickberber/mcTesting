@@ -15,17 +15,39 @@ I started to write my own
 
 ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
 
-TO GET STARTED(Quick Version):
 
-Recreate this file to start:
+
+Writing tests with Mc-Testing:
+=========================
+
+Create a testFile.js.
+
+Require the module `var tests = require('mc-testing');`
+
+For ease, I recommend also adding `var write = tests.write;`, which contains the description and testFile methods.
+
+The `write.testFile` method is where you'll write your tests. All tests will be passed into this method as arguments.
+
+Writing an individual tests begins with the `write.description` method. This method takes a string as a description of what you are testing.
+
+`write.description` returns a function that takes a McTestingjs test method.
+Example: `write.description('these arrays should be equal')(tests.compareArrays([1,2,3],[1,2,3]))`
+
 ![Alt text](./assets/samplefile.png 'samplefile screenshot')
+
 
 
 Use a 'MasterTestFile' as a wrapper for multiple files
 ![Alt text](./assets/masterfile.png 'samplefile screenshot')
 
+Make sure to set module.exports equal to your testing function(as seen in the top screenshot).
+
+Require all your tests in a masterTestFile.
+
+Place all your tests in an array that will be passed into the `write.masterTestFile` function.
+
 run:
-`node [filename].js`
+`node masterTestFile.js`
 
 and your tests will output something like this in the command line:
 ![Alt text](./assets/sampleoutput.png 'testResultsjs screenshot')
@@ -33,15 +55,7 @@ and your tests will output something like this in the command line:
 
 
 
-Writing tests starts with
-=========================
-1-Creating a testFile.js.
-2-Require the module `var tests = require('mc-testing');`
-3-For ease, I recommend also adding `var writeTests = tests.writeTests;`, which contains the description and testFile methods
-4-The `writeTests.testFile` method does the work of kicking off our process. All tests will be passed into this method as arguments.
-5-Writing an individual tests begins with the `writeTests.description` method. This method takes a string as a description of what you are testing.
-6-`writeTests.description` returns a function that takes a McTestingjs test method.
-Example: `writeTests.description('these arrays should be equal')(tests.compareArrays([1,2,3],[1,2,3]))`
+
 
 
 FAQ's
