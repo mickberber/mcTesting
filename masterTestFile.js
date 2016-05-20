@@ -16,4 +16,4 @@ tests = [
   typeOfTests
 ];
 
-write.masterTestFile(tests.join(''));
+write.masterTestFile(tests);

@@ -20,8 +20,12 @@ TO GET STARTED(Quick Version):
 Recreate this file to start:
 ![Alt text](./assets/samplefile.png 'samplefile screenshot')
 
+
+Use a 'MasterTestFile' as a wrapper for multiple files
+![Alt text](./assets/masterfile.png 'samplefile screenshot')
+
 run:
-`node testFile.js`
+`node [filename].js`
 
 and your tests will output something like this in the command line:
 ![Alt text](./assets/sampleoutput.png 'testResultsjs screenshot')

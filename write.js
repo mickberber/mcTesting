@@ -36,11 +36,8 @@ write.description = function(string) {
   };
 };
 
-write.masterTestFile = function() {
-  var testsToRun = write.arrayify(arguments);
-  for(var i = 0; i < testsToRun.length; i++) {
-    console.log(testsToRun[i]);
-  }
+write.masterTestFile = function(arr) {
+    console.log(arr.join(''));
 };
 
 module.exports = write;
