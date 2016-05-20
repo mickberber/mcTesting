@@ -8,7 +8,7 @@ write.arrayify = function(args) {
 
 write.testFile = function() {
   var args = write.arrayify(arguments);
-  var header = 'McTestingjs::\n==========\n'
+  var header = '\nMcTestingjs::\n==========\n';
   var numTests = 0;
   var passed = 0;
   var failed = 0;
@@ -22,7 +22,7 @@ write.testFile = function() {
     return '    Test number ' + numTests + ':' + value;
   }).join('\n');
   var footer = '\nResults:\n==========\n    Total number of tests: ' + numTests + '\n    Total tests passed: ' + passed  + '\n    Total tests failed: ' + failed;
-  console.log(header + results + footer);
+  return header + results + footer + '\n';
 };
 
 write.description = function(string) {
@@ -34,6 +34,13 @@ write.description = function(string) {
       return string + ' Failed';
     }
   };
+};
+
+write.masterTestFile = function() {
+  var testsToRun = write.arrayify(arguments);
+  for(var i = 0; i < testsToRun.length; i++) {
+    console.log(testsToRun[i]);
+  }
 };
 
 module.exports = write;
