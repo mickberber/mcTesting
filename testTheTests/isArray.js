@@ -9,7 +9,7 @@ function callbackObj() {
   return {};
 }
 
-write.testFile(
+module.exports = write.testFile(
   write.description('isArray should return true when passed an array')
     (tests.isArray([])),
   write.description('isArray should return false when passed a string')

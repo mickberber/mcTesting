@@ -8,7 +8,7 @@ var fn1 = function() { return true; };
 var fn2 = function() { return true; };
 var fn3 = function() { return true; };
 
-write.testFile(
+module.exports = write.testFile(
   write.description('arrayify should return an array')(
     tests.compareYield(
       tests.typeof(tests.arrayify()), 'array')),
