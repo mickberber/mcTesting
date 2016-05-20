@@ -9,7 +9,7 @@ function callbackObj() {
   return {};
 }
 
-write.testFile(
+module.exports = write.testFile(
   write.description('isObject should return true when passed an Object')
     (tests.isObject({})),
   write.description('isObject should return false when passed a string')

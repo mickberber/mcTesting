@@ -13,7 +13,7 @@ function callbackStr() {
   return 'string';
 }
 
-write.testFile(
+module.exports = write.testFile(
   write.description('isFunction should return false when passed a string')
   (tests.compareYield(
     tests.isFunction('string'), false)),

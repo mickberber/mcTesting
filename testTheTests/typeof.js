@@ -1,7 +1,7 @@
 var tests = require('./../tests.js');
 var write = tests.write;
 
-write.testFile(
+module.exports = write.testFile(
   write.description('typeof should return \'array\' when passed an array')
     (tests.compareYield(
       tests.typeof([]), 'array')),

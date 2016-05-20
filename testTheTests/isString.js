@@ -13,7 +13,7 @@ function callbackStr() {
   return 'string';
 }
 
-write.testFile(
+module.exports = write.testFile(
   write.description('isString should return true when passed a string')
   (tests.compareYield(
     tests.isString('string'), true)),
