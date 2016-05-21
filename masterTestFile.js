@@ -6,7 +6,8 @@ var isNumberTests = require('./testTheTests/isNumber.js');
 var isObjectTests = require('./testTheTests/isObject.js');
 var isStringTests = require('./testTheTests/isString.js');
 var typeOfTests = require('./testTheTests/isFunction.js');
-var length = requires('./testTheTests/lenght.js');
+var length = require('./testTheTests/length.js');
+var primitives = require('./testTheTests/primitives.js');
 
 tests = [
   arrayify,
@@ -15,7 +16,8 @@ tests = [
   isObjectTests,
   isStringTests,
   typeOfTests,
-  length
+  length,
+  primitives
 ];
 
 write.masterTestFile(tests);
