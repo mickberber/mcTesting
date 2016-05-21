@@ -95,14 +95,8 @@ tests.compareArrays = function() {
   //arrayify arguments object
   var args = tests.arrayify(arguments);
   for(var i = 0; i < args[0].length; i++) {
-
     for(var j = 1; j < args.length; j++) {
-      if(tests.length(args[j]) !== tests.length(args[0])) {
-        return false;
-      }
-      if(args[0][i] !== args[j][i]) {
-        return false;
-      }
+      comparePrimitives(args[0][i], args[j][i]);
     }
   }
   return true;

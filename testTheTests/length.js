@@ -7,5 +7,5 @@ module.exports = write.testFile(
       tests.length([1,2,3,4]), 4)),
   write.description('tests.length should return the length of a string')(
     tests.compareYield(
-      tests.length('string'), 4))
+      tests.length('string'), 6))
 );
