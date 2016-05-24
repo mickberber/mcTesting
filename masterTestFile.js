@@ -8,7 +8,9 @@ var isStringTests = require('./tests/isString.js');
 var typeOfTests = require('./tests/isFunction.js');
 var length = require('./tests/length.js');
 var primitives = require('./tests/primitives.js');
-var compArrays = require('./tests/compareArrays.js');
+var arrays = require('./tests/compareArrays.js');
+var objects = require('./tests/compareObjects.js');
+var compYield = require('./tests/compareYield.js');
 
 tests = [
   arrayify,
@@ -19,7 +21,9 @@ tests = [
   typeOfTests,
   length,
   primitives,
-  compArrays
+  arrays,
+  objects,
+  compYield
 ];
 
 write.masterTestFile(tests);

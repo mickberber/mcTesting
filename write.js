@@ -29,9 +29,9 @@ write.description = function(string) {
   //expected to be truthy or falsy, or a string
   return function(testToRun) {
     if(testToRun) {
-      return string + ' :: Passed';
+      return string + ' :: ✓';
     } else {
-      return string + ' :: Failed';
+      return string + ' :: 𝘅';
     }
   };
 };
