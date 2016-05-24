@@ -1,4 +1,4 @@
-var tests = require('./../tests.js');
+var tests = require('./../mcTesting.js');
 var write = tests.write;
 
 module.exports = write.testFile(

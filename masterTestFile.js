@@ -1,4 +1,4 @@
-var tests = require('./tests.js');
+var tests = require('./mcTesting.js');
 var write = tests.write;
 var arrayify = require('./testTheTests/arrayify.js');
 var isArrayTests = require('./testTheTests/isArray.js');
