@@ -19,7 +19,7 @@ write.testFile = function() {
     } else {
       failed++;
     }
-    return '    Test number ' + numTests + ':' + value;
+    return '    Test number ' + numTests + ' :: ' + value;
   }).join('\n');
   var footer = '\nResults:\n==========\n    Total number of tests: ' + numTests + '\n    Total tests passed: ' + passed  + '\n    Total tests failed: ' + failed;
   return header + results + footer + '\n';
@@ -29,9 +29,9 @@ write.description = function(string) {
   //expected to be truthy or falsy, or a string
   return function(testToRun) {
     if(testToRun) {
-      return string + ' Passed';
+      return string + ' :: Passed';
     } else {
-      return string + ' Failed';
+      return string + ' :: Failed';
     }
   };
 };
