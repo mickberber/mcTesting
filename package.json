@@ -11,5 +11,8 @@
   "entry point": "clitool.js",
   "bin": {
     "mc-testing": "./clitool.js"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3"
   }
 }
