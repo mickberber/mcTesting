@@ -13,5 +13,9 @@ module.exports = write.testFile(
   write.description('compareObjects should return false when passed an object and a number')(
     tests.compareYield(
       tests.compareObjects(42, {}),
+      false)),
+  write.description('compareObjects should return true when passed an object and a function')(
+    tests.compareYield(
+      tests.compareObjects(function(){}, {}),
       true))
 );
