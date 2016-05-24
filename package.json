@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Michael Berber <mickberber@icloud.com> (https://mickberber.herokuapp.com/)",
-  "license": "ISC"
+  "license": "ISC",
+  "entry point": "clitool.js",
+  "bin": {
+    "mc-testing": "./clitool.js"
+  }
 }
