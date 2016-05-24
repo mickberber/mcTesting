@@ -96,7 +96,7 @@ tests.compareArrays = function() {
   var args = tests.arrayify(arguments);
   for(var i = 0; i < args[0].length; i++) {
     for(var j = 1; j < args.length; j++) {
-      comparePrimitives(args[0][i], args[j][i]);
+      tests.comparePrimitives(args[0][i], args[j][i]);
     }
   }
   return true;
