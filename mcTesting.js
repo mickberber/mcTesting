@@ -82,6 +82,9 @@ tests.length = function(value) {
 tests.comparePrimitives = function() {
   var args = tests.arrayify(arguments);
   for(var i = 1; i < args.length; i++) {
+    if(typeof args[i] === 'Object' || typeof args[i] === NaN) {
+      return false;
+    }
     if(args[i] !== args[0]) {
       return false;
     }
@@ -90,10 +93,12 @@ tests.comparePrimitives = function() {
 };
 
 //compare arrays
-//assumes it is receiving two or more arrays
 tests.compareArrays = function() {
   //arrayify arguments object
   var args = tests.arrayify(arguments);
+  if(!Array.isArray(args[0])) {
+        return false;
+  }
   for(var i = 0; i < args[0].length; i++) {
     for(var j = 1; j < args.length; j++) {
       tests.comparePrimitives(args[0][i], args[j][i]);
@@ -108,6 +113,9 @@ tests.compareObjects = function() {
   //arrayify
   var args = tests.arrayify(arguments);
   var string = JSON.stringify(args[0]);
+  if(typeof args[0] !== 'Object') {
+      return false;
+  }
   for(var i = 1; i < args.length; i++) {
     if(string !== JSON.stringify(args[i])){
       return false;

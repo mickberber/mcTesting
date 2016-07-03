@@ -40,12 +40,12 @@ Returns true or false. Takes unlimited arguments.
 
 ###tests.compareArrays
 ===============
-Returns true or false. Takes unlimited arguments. Assumes all arguments are arrays.
+Returns true or false. Takes unlimited arguments.
   Checks to see if the arguments passed are all equal.
 
 ###tests.compareObjects
 ===============
-Returns true or false. Takes unlimited arguments. Assumes all arguments are objects.
+Returns true or false. Takes unlimited arguments.
   Checks to see if the arguments passed are all equal.
 
 ###tests.compareYield
