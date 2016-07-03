@@ -68,3 +68,6 @@ Is this an assertion library?
 
 What becomes easier by using this module?
 I believe this to be a quick and simple way to test my code, and passing in a couple callbacks seemed like a pretty good way to accomplish quick concise lines of code.
+
+#License
+MIT(https://opensource.org/licenses/mit-license.php)
