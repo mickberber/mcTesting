@@ -144,4 +144,11 @@ tests.compareYield = function(callback, toEqual) {
   }
 };
 
+tests.hasKey = function(objToCheck, key) {
+  if(objToCheck[key] === undefined) {
+    return false;
+  }
+  return true;
+};
+
 module.exports = tests;

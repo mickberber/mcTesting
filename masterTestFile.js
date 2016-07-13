@@ -11,6 +11,7 @@ var primitives = require('./tests/primitives.js');
 var arrays = require('./tests/compareArrays.js');
 var objects = require('./tests/compareObjects.js');
 var compYield = require('./tests/compareYield.js');
+var hasKey = require('./tests/hasKey.js');
 
 tests = [
   arrayify,
@@ -23,7 +24,8 @@ tests = [
   primitives,
   arrays,
   objects,
-  compYield
+  compYield,
+  hasKey
 ];
 
 write.masterTestFile(tests);
