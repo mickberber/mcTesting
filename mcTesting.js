@@ -113,7 +113,7 @@ tests.compareObjects = function() {
   //arrayify
   var args = tests.arrayify(arguments);
   var string = JSON.stringify(args[0]);
-  if(typeof args[0] !== 'Object') {
+  if(typeof args[0] !== 'object') {
       return false;
   }
   for(var i = 1; i < args.length; i++) {
