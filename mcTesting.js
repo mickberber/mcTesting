@@ -151,4 +151,12 @@ tests.hasKey = function(objToCheck, key) {
   return true;
 };
 
+tests.hasMethod = function (funcToCheck, method) {
+  if(funcToCheck[method] !== undefined && typeof funcToCheck[method] === 'function') {
+    return true;
+  }
+  return false;
+}
+
+
 module.exports = tests;

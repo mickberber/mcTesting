@@ -12,6 +12,7 @@ var arrays = require('./tests/compareArrays.js');
 var objects = require('./tests/compareObjects.js');
 var compYield = require('./tests/compareYield.js');
 var hasKey = require('./tests/hasKey.js');
+var hasMethod = require('./tests/hasMethod.js');
 
 tests = [
   arrayify,
@@ -25,7 +26,8 @@ tests = [
   arrays,
   objects,
   compYield,
-  hasKey
+  hasKey,
+  hasMethod
 ];
 
 write.masterTestFile(tests);
